@@ -1,0 +1,32 @@
+/*---- variables ----*/
+$large: 'screen and (min-width: 1068px)';
+$medium: 'screen and (max-width: 1068px) and (min-width: 768px)';
+$small: 'screen and (max-width: 767px)';
+
+/*---- Mixins ----*/
+@mixin mq($mqString) {
+  @media #{$mqString} {
+    @content;
+  }
+}
+body {
+  padding-right: 1px;
+  scroll-behavior: smooth; 
+}
+body::-webkit-scrollbar {
+  width:8px;
+  height:8px;
+}
+body::-webkit-scrollbar-track-piece {
+  background: #fff;
+}
+body::-webkit-scrollbar-thumb {   // 滚动条里面可以拖动的那部分
+  background:rgba(144,147,153,.5);
+  border-radius:30px;
+}
+body::-webkit-scrollbar-corner      {   // 边角
+  background:#fff;
+}
+body::-webkit-scrollbar-resizer     {   // 定义右下角拖动块的样式
+  background:#fff; 
+}

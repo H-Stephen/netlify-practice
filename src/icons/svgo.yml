@@ -1,0 +1,24 @@
+# 替换默认配置
+# plugins 表示配置自定义的插件
+# removeAttrs 表示按模式删除属性
+# 'fill' 表示移除填充属性
+# multipass: true
+# full: true
+
+plugins:
+
+  # - name
+  #
+  # or:
+  # - name: false
+  # - name: true
+  #
+  # or:
+  # - name:
+  #     param1: 1
+  #     param2: 2
+
+- removeAttrs:
+    attrs:
+      - 'fill'
+      - 'fill-rule'

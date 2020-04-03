@@ -1,0 +1,6 @@
+{
+  "semi": false, // 是否每句后都加分号
+  "singleQuote": true, // 是否使用单引号
+  "trailingComma": "all", // 数组尾逗号
+  "bracketSpacing": false, // {foo: xx}还是{ foo: xx }
+}

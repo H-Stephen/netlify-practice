@@ -1,4 +1,5 @@
-# stephen-web
+# available-cli
+基于vue-cli进行二次封装改造，上手可用。
 
 ## Project setup
 ```

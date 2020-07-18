@@ -9,7 +9,7 @@ const requireComponent = require.context(
   // 是否查询其子目录
   true,
   // 匹配基础文件名的正则表达式
-  /router\/\w+.js$/
+  /router.js$/
 );
 
 // 获取路由集合

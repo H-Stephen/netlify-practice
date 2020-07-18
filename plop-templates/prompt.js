@@ -24,7 +24,7 @@ module.exports = {
     const actions = [
       {
         type: "add",
-        path: `src/modules/${name}/router/index.js`,
+        path: `src/modules/${name}/router.js`,
         templateFile: "plop-templates/router.hbs",
         skipIfExists: true
       },

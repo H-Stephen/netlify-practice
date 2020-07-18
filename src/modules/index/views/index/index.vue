@@ -1,18 +1,22 @@
 <template>
   <div class="index">
-    <cat class="cat" />
+    欢迎，{{ username }}
+    <div>{{ avatar }}</div>
   </div>
 </template>
 
 <script>
-import Cat from "vuepress-plugin-cat/cat";
+import { mapGetters, mapState } from "vuex";
 
 export default {
-  components: {
-    Cat
-  },
   data() {
     return {};
+  },
+  computed: {
+    ...mapState({
+      avatar: state => state.user.avatar
+    }),
+    ...mapGetters(["username"])
   },
   mounted() {},
   methods: {}

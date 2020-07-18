@@ -1,12 +1,12 @@
 import router from "../router";
-// import store from "./store";
+import store from "../store";
 import NProgress from "nprogress"; // progress bar
 import "nprogress/nprogress.css"; // progress bar style
 import Cookies from "js-cookie";
 
 NProgress.configure({ showSpinner: false }); // NProgress Configuration
 
-const whiteList = []; //  whitelist
+const whiteList = ["/login"]; //  whitelist
 
 router.beforeEach(async (to, from, next) => {
   NProgress.start();
@@ -26,11 +26,12 @@ router.beforeEach(async (to, from, next) => {
 
   if (!token || token === "undefined") {
     // 没有token重新登录
-    // next('/login')
+    next("/login");
+    return;
   }
 
   // 从cookie中获取数据 - 应对刷新
-  // store.commit('getCookieInfo')
+  store.dispatch("user/getUserInfoFromCookie");
 
   next();
 });

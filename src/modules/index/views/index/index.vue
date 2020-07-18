@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     欢迎，{{ username }}
-    <div>{{ avatar }}</div>
+    <div>token: {{ token }}</div>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     ...mapState({
-      avatar: state => state.user.avatar
+      token: state => state.user.token
     }),
     ...mapGetters(["username"])
   },
@@ -23,6 +23,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "./index.scss";
-</style>
+<style lang="scss"></style>

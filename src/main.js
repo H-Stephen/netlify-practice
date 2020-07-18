@@ -4,6 +4,7 @@ import router from "./router";
 import "@/icons";
 
 import "./plugins/global";
+import "./middleware/index";
 
 import store from "./store";
 

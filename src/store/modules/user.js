@@ -19,9 +19,7 @@ const state = {
 
 const mutations = {
   SET_TO_COOKIE(state, data) {
-    console.log(777, Object.entries(data));
     Object.entries(data).forEach(([key, val]) => {
-      console.log(key, val);
       state[key] = val;
       Cookies.set(key, val);
     });

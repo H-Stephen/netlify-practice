@@ -2,13 +2,13 @@
   <div>
     <div v-for="m in menuList" :key="m.id" class="menu-item">
       <el-menu-item v-if="!m.children" :index="m.path">
-        <svg-icon :icon-class="m.icon"></svg-icon>
+        <svg-icon v-if="m.icon" :icon-class="m.icon"></svg-icon>
         <span slot="title" class="item-title">{{ m.name }}</span>
       </el-menu-item>
 
       <el-submenu v-else :index="m.id + ''">
         <template slot="title">
-          <svg-icon :icon-class="m.icon"></svg-icon>
+          <svg-icon v-if="m.icon" :icon-class="m.icon"></svg-icon>
           <span class="sub-menu-title">{{ m.name }}</span>
         </template>
         <menu-item :menu-list="m.children"></menu-item>

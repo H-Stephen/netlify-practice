@@ -32,7 +32,12 @@ export default {
         {
           name: "篮球专栏",
           icon: "basketball",
-          path: "/index2"
+          children: [
+            {
+              name: "篮球专栏1",
+              path: "/index2"
+            }
+          ]
         }
       ]
     };

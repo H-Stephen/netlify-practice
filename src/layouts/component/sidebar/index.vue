@@ -6,7 +6,7 @@
       :collapse-transition="false"
       background-color="#304156"
       text-color="#A7A8AD"
-      active-text-color="#fff"
+      active-text-color="#59b6f9"
       router
       class="aside-menu"
     >
@@ -70,12 +70,7 @@ $footerHeight: 40px;
 
     .el-menu-item {
       &:hover {
-        color: #fff !important;
-        background-color: #263445 !important;
-      }
-
-      &.is-active {
-        background-color: #263445 !important;
+        background-color: #263445;
       }
     }
 
@@ -153,6 +148,15 @@ $footerHeight: 40px;
         border-radius: 20px;
       }
     }
+  }
+}
+// menu hover
+
+.el-submenu .el-menu-item {
+  background-color: #1f2d3d !important;
+
+  &:hover {
+    background-color: #192431 !important;
   }
 }
 </style>

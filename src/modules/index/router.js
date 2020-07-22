@@ -16,5 +16,16 @@ export default [
         component: () => import("./views/index/index.vue")
       }
     ]
+  },
+  {
+    path: "/index2",
+    component: moduleLayout,
+    children: [
+      {
+        path: "/",
+        name: "Index2",
+        component: () => import("./views/index/index2.vue")
+      }
+    ]
   }
 ];

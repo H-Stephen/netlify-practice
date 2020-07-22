@@ -1,7 +1,7 @@
 <template>
   <div class="layout-login">
     <div class="login-form">
-      <h1 class="title"><i class="el-icon-s-home"></i> 系统登录</h1>
+      <h1 class="title"><svg-icon icon-class="home"></svg-icon> 系统登录</h1>
       <slot />
     </div>
     <div class="buttom-wrapper">

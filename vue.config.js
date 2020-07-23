@@ -4,7 +4,24 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 
+const proxyConfig = require("./proxy.config");
+const port = 8000;
+
 module.exports = {
+  publicPath: "./",
+  outputDir: "dist",
+  assetsDir: "static",
+  lintOnSave: process.env.NODE_ENV === "development",
+  productionSourceMap: false,
+  devServer: {
+    port: port,
+    open: true,
+    overlay: {
+      warnings: false,
+      errors: true
+    },
+    proxy: proxyConfig
+  },
   chainWebpack: config => {
     config.module
       .rule("svg")

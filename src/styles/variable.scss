@@ -1,2 +1,7 @@
 $headerHeight: 50px;
 $headerBg: #2d303b;
+$breadcrumbHeight: 40px;
+
+:export {
+  breadcrumbHeight: $breadcrumbHeight;
+}

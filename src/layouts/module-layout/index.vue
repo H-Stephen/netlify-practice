@@ -4,6 +4,7 @@
     <el-container>
       <sidebar :menuList="menuList" />
       <el-main>
+        <breadcrumb />
         <app-main></app-main>
       </el-main>
     </el-container>
@@ -14,12 +15,14 @@
 import appMain from "../component/app-main";
 import layoutHeader from "../component/layout-header";
 import Sidebar from "../component/sidebar/index";
+import Breadcrumb from "../component/breadcrumb/index";
 
 export default {
   components: {
     appMain,
     layoutHeader,
-    Sidebar
+    Sidebar,
+    Breadcrumb
   },
   data() {
     return {

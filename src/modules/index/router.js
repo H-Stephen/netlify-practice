@@ -1,6 +1,5 @@
 import moduleLayout from "@/layouts/module-layout/index.vue";
 const INDEX = { name: "首页" };
-const INDEX2 = { name: "第二项" };
 const DEMO_ACTION = { name: "", action: "demoAction", disabled: true };
 // 路由文件
 export default [
@@ -31,7 +30,7 @@ export default [
         name: "Index2",
         component: () => import("./views/index/index2.vue"),
         meta: {
-          breadcrumb: [INDEX2, DEMO_ACTION]
+          breadcrumb: [DEMO_ACTION]
         }
       }
     ]

@@ -42,10 +42,7 @@ module.exports = {
   pluginOptions: {
     "style-resources-loader": {
       preProcessor: "scss",
-      patterns: [
-        resolve("./src/styles/global.scss"),
-        resolve("./src/styles/variable.scss")
-      ]
+      patterns: [resolve("./src/styles/variable.scss")]
     }
   },
   configureWebpack: config => {

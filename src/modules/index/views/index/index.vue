@@ -16,7 +16,9 @@ export default {
       token: state => state.user.token
     })
   },
-  mounted() {},
+  mounted() {
+    this.$message.success("777777777");
+  },
   methods: {}
 };
 </script>

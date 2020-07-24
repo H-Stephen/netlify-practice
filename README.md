@@ -1,5 +1,5 @@
 # available-cli
-基于vue-cli进行二次封装改造，上手可用。
+基于vue-cli进行二次封装改造（同时参考vue-element-admin），上手可用。
 
 1、集成并配置sass
 
@@ -10,6 +10,10 @@
 4、集成Vuex(支持命名模块式)
 
 5、全局路由守卫（其中处理有页面加载进度条）
+
+6、基于路由meta的属性实现的灵活性更好的面包屑
+
+7、重新封装的axios
 
 ## Project setup
 ```

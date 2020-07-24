@@ -1,5 +1,5 @@
-# available-cli
-基于vue-cli进行二次封装改造（同时参考vue-element-admin），上手可用。
+# available-template
+基于vue-cli进行改造（参考vue-element-admin），上手可用。
 
 1、集成并配置sass
 
@@ -14,6 +14,8 @@
 6、基于路由meta的属性实现的灵活性更好的面包屑
 
 7、重新封装的axios
+
+8、重写element的$message(全局设置duration等)
 
 ## Project setup
 ```

@@ -55,7 +55,7 @@ export default {
 $footerHeight: 40px;
 .sidebar-container {
   transition: width 0.28s;
-  height: calc(100vh - #{$headerHeight});
+  min-height: calc(100vh - #{$headerHeight});
   display: flex;
   flex-direction: column;
   justify-content: space-between;

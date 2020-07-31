@@ -1,15 +1,16 @@
 <template>
   <div class="layout-header">
     <div class="left">
-      <img src="@/assets/images/v.png" alt="" />
+      <img src="@/assets/images/v.png" alt />
       TEMPLATE
     </div>
     <div class="right">
+      <img :src="avatar" class="avatar-img" alt="avatar" />
       <el-dropdown trigger="click" placement="bottom" @command="handleCommand">
-        <span class="username-text"
-          >{{ username
-          }}<i class="el-icon-arrow-down el-icon--right set-Iconcolor"
-        /></span>
+        <span class="username-text">
+          {{ username }}
+          <i class="el-icon-arrow-down el-icon--right set-Iconcolor" />
+        </span>
         <el-dropdown-menu slot="dropdown" class="user-drop-menu">
           <el-dropdown-item
             v-for="(item, index) in dropdownList"
@@ -47,7 +48,14 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["username"])
+    ...mapGetters(["username"]),
+    avatar() {
+      return (
+        (this.$store.state.user.avatar &&
+          this.$store.state.user.avatar !== "undefined") ||
+        "https://deepexi.oss-cn-shenzhen.aliyuncs.com/xpaas-console/user-portrait.png"
+      );
+    }
   },
   methods: {
     handleCommand(command) {
@@ -86,6 +94,14 @@ export default {
     }
   }
   .right {
+    display: flex;
+    align-items: center;
+    .avatar-img {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
     .username-text {
       cursor: pointer;
       color: #fff;

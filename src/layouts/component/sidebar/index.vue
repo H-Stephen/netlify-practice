@@ -56,6 +56,7 @@ $footerHeight: 40px;
 .sidebar-container {
   transition: width 0.28s;
   min-height: calc(100vh - #{$headerHeight});
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

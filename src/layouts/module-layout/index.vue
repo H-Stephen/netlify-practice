@@ -2,7 +2,9 @@
   <div class="module-laout">
     <layout-header></layout-header>
     <el-container>
-      <sidebar :menuList="menuList" />
+      <div>
+        <sidebar :menuList="menuList" />
+      </div>
       <el-main>
         <breadcrumb />
         <app-main></app-main>

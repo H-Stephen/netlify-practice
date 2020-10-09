@@ -17,6 +17,8 @@
 
 8、重写element的$message(全局设置duration等)
 
+9、加入可选链 ['@babel/plugin-proposal-optional-chaining']
+
 ## Project setup
 ```
 yarn install

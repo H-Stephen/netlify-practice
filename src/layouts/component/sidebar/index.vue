@@ -62,7 +62,8 @@ $footerHeight: 40px;
   justify-content: space-between;
   width: 180px !important;
 
-  .el-menu {
+  > .el-menu {
+    // >很关键  避免二级目录展开 高度污染
     box-sizing: border-box;
     flex: 1;
     border: none;

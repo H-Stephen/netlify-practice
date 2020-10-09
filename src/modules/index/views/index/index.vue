@@ -17,7 +17,13 @@ export default {
     })
   },
   mounted() {
-    this.$message.success("777777777");
+    const obj = {
+      a: {
+        b: 2
+      }
+    };
+    console.log(obj?.a?.b); // 2
+    console.log(obj?.a?.c); // undefined
   },
   methods: {}
 };

@@ -2,7 +2,7 @@ import axios from "axios";
 import { Message } from "element-ui";
 import store from "@/store";
 
-const handleError = () => {
+const handleError = (() => {
   // 这里只处理token失效
   // 其他异常报错由业务代码自行catch处理-避免重复报错同时也需要让报错信息可自定义
   let timer;
@@ -16,7 +16,7 @@ const handleError = () => {
       }, 1200);
     }
   };
-};
+})();
 
 // create an axios instance
 const service = axios.create({
